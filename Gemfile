@@ -29,5 +29,5 @@ end
     gem 'simple_form'
     gem 'devise'
     gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
-
+    gem 'friendly_id' 
     
