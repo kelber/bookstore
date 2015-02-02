@@ -2,7 +2,7 @@
 
 <div class="row">
 <div class="col-md-4">
-    <%= image_tag ('agile.jpg'), class: "img-responsive" %>
+    <%= image_tag @book.resource.url(:medium), class: "img-responsive" %>
 </div>
 <div class="col-md-6 col-md-offset-2" align="center">
     <div class="well center">
@@ -27,6 +27,7 @@
   <%= @book.user.email %>
   </p>
 <%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Back', books_path %> | 
+<%= link_to 'Destroy' , book_path(@book), method: :delete, data: { confirm: "Vc tem certeza?" } %>
 </div>
 </div>
