@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+<div class="col-md-4">
+    <%= image_tag ('agile.jpg'), class: "img-responsive" %>
+</div>
+<div class="col-md-6 col-md-offset-2" align="center">
+    <div class="well center">
+    <h1>
+  <%= @book.title %>
+  <hr>
+    </h1>
+    <h3>
+  <%= @book.author %>
+  </h3>
+  <p>
+  <%= @book.description %>
+  </p>
+  <h1>
+      US$
+  <%= @book.price.to_f / 100 %>
+</h1>
+<p>Avaliable? 
+  <%= @book.avaliable %>
+  </p>
+  <p>
+  <%= @book.user.email %>
+  </p>
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
+</div>
+</div>

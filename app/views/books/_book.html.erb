@@ -1,0 +1,21 @@
+
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+        <%= link_to book_path(book) do %>
+    <%= image_tag ('agile.jpg'), class: "img-responsive" %>
+        <% end %>
+      <div class="caption">
+          <h3><%= book.title %></h3>
+          <p><%= book.title %></p>
+          <h3>US$ <%= book.price.to_f / 100 %></h3>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
