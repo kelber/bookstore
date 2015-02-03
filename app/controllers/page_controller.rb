@@ -1,6 +1,6 @@
 class PageController < ApplicationController
   def home
-      @books = Book.last(2)
+      @books = Book.last(3)
   end
     
   def dashboard

@@ -1,26 +1,18 @@
 class Book < ActiveRecord::Base
 
-    belongs_to :user
-
-
      extend FriendlyId
      friendly_id :title, use: :slugged
-    
+
+     belongs_to :user
 
 
-
-
-
-
-
-     has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/no_image.png"
+     has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "no_image.png"
      validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
-  has_attached_file :resource, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/no_image.png"
+  has_attached_file :resource, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "no_image.png"
      validates_attachment_content_type :resource, :content_type => /\Aimage\/.*\Z/
 
-
-
+    validates_attachment_content_type :resource, content_type: { content_type: "application/pdf" }
 
 
 end
