@@ -18,6 +18,7 @@ group :development, :test do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'dotenv-rails'
 end
 
 group :production do
@@ -31,4 +32,11 @@ end
     gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
     gem 'friendly_id' 
     gem 'cancan'
-    
+    gem 'stripe'
+
+
+
+
+
+
+

@@ -1,4 +1,5 @@
 class PageController < ApplicationController
+    
   def home
       @books = Book.last(3)
   end
