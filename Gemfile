@@ -33,6 +33,7 @@ end
     gem 'friendly_id' 
     gem 'cancan'
     gem 'stripe'
+    gem 'aasm'
 
 
 
