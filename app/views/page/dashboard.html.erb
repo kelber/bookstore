@@ -15,15 +15,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @books.each do |book| %>
-            <tr>
-            <td><%= book.id %></td>
-            <td><%= link_to book.title, book_path(book) %></td>
-            <td><%= book.avaliable %></td>
-            <td><%= link_to 'Edit', edit_book_path(book) %></td>
-            </tr>
-        <% end %>
-    
+        <%= render 'books' %>
       </tbody>
     </table>
   </div>
@@ -45,15 +37,6 @@
         </tr>
       </thead>
       <tbody>
-        <% @books.each do |book| %>
-            <tr>
-            <td><%= book.id %></td>
-            <td><%= link_to book.title, book_path(book) %></td>
-            <td><%= book.avaliable %></td>
-            <td><%= link_to 'Edit', edit_book_path(book) %></td>
-            </tr>
-        <% end %>
-    
       </tbody>
     </table>
   </div>
@@ -61,7 +44,6 @@
     </div>
  <div class="col-md-4">
         <h1 align="center">My Sales</h1>
-        <h3>My Books | <%= link_to 'New Book', new_book_path, class: "btn btn-info btn-sm" %></h3>
     <div class="table table-condensed">
         <div class="bs-example" data-example-id="condensed-table">
     <table class="table table-condensed">
@@ -70,19 +52,10 @@
           <th>ID</th>
           <th>Name</th>
           <th>Avaliable</th>
-          <th></th> 
+          <th>Buyer</th> 
         </tr>
       </thead>
       <tbody>
-        <% @books.each do |book| %>
-            <tr>
-            <td><%= book.id %></td>
-            <td><%= link_to book.title, book_path(book) %></td>
-            <td><%= book.avaliable %></td>
-            <td><%= link_to 'Edit', edit_book_path(book) %></td>
-            </tr>
-        <% end %>
-    
       </tbody>
     </table>
   </div>
